@@ -1,0 +1,138 @@
+'use client'
+import React, { useState, useEffect } from "react";
+
+type BingoCell = {
+  number: number;
+  isMarked: boolean;
+};
+
+const generateBingoBoard = (): BingoCell[][] => {
+  const board: BingoCell[][] = [];
+  for (let i = 0; i < 5; i++) {
+    const row: BingoCell[] = [];
+    for (let j = 0; j < 5; j++) {
+      const randomNumber = Math.floor(Math.random() * 75) + 1;
+      row.push({ number: randomNumber, isMarked: false });
+    }
+    board.push(row);
+  }
+  // Set the center cell as "Free Space"
+  board[2][2] = { number: 0, isMarked: true };
+  return board;
+};
+
+const BingoApp: React.FC = () => {
+  const [board, setBoard] = useState<BingoCell[][]>(generateBingoBoard());
+  const [winningIndices, setWinningIndices] = useState<number[][] | null>(null);
+
+  // Toggle cell marking
+  const toggleCellMark = (rowIndex: number, colIndex: number) => {
+    setBoard((prevBoard) =>
+      prevBoard.map((row, rIdx) =>
+        row.map((cell, cIdx) =>
+          rIdx === rowIndex && cIdx === colIndex
+            ? { ...cell, isMarked: !cell.isMarked }
+            : cell
+        )
+      )
+    );
+  };
+
+  // Check for winning patterns whenever the board changes
+  useEffect(() => {
+    checkForBingo();
+  }, [board]);
+
+  // Function to check for Bingo patterns
+  const checkForBingo = () => {
+    const newWinningIndices: number[][] = [];
+
+    // Check rows
+    for (let i = 0; i < 5; i++) {
+      if (board[i].every((cell) => cell.isMarked)) {
+        newWinningIndices.push([i, -1]); // Row index with -1 indicates a row win
+      }
+    }
+
+    // Check columns
+    for (let j = 0; j < 5; j++) {
+      if (board.every((row) => row[j].isMarked)) {
+        newWinningIndices.push([-1, j]); // Column index with -1 indicates a column win
+      }
+    }
+
+    // Check diagonals
+    if (board.every((row, idx) => row[idx].isMarked)) {
+      newWinningIndices.push([-1, -1]); // Top-left to bottom-right diagonal
+    }
+    if (board.every((row, idx) => row[4 - idx].isMarked)) {
+      newWinningIndices.push([-1, -2]); // Top-right to bottom-left diagonal
+    }
+
+    if (newWinningIndices.length > 0) {
+      setWinningIndices(newWinningIndices);
+    } else {
+      setWinningIndices(null);
+    }
+  };
+
+  // Helper to determine if a cell is part of a winning pattern
+  const isCellInWinningPattern = (
+    rowIndex: number,
+    colIndex: number
+  ): boolean => {
+    if (!winningIndices) return false;
+
+    return winningIndices.some(([winRow, winCol]) => {
+      if (winRow === -1 && winCol === -1) return rowIndex === colIndex; // Top-left to bottom-right diagonal
+      if (winRow === -1 && winCol === -2)
+        return rowIndex + colIndex === 4; // Top-right to bottom-left diagonal
+      if (winRow === rowIndex && winCol === -1) return true; // Row match
+      if (winRow === -1 && winCol === colIndex) return true; // Column match
+      return false;
+    });
+  };
+
+  return (
+    <div className="flex flex-col items-center p-4">
+      <h1 className="text-3xl font-bold mb-4 text-blue-600">Bingo Game</h1>
+      <div className="grid grid-cols-5 gap-2">
+        {board.map((row, rowIndex) =>
+          row.map((cell, colIndex) => (
+            <button
+              key={`${rowIndex}-${colIndex}`}
+              onClick={() => toggleCellMark(rowIndex, colIndex)}
+              className={`w-16 h-16 flex items-center justify-center border rounded-md text-lg font-semibold ${
+                cell.isMarked
+                  ? "bg-green-500 text-white"
+                  : "bg-white text-black"
+              } ${
+                isCellInWinningPattern(rowIndex, colIndex)
+                  ? "ring-4 ring-yellow-400"
+                  : ""
+              }`}
+            >
+              {cell.number === 0 ? "FREE" : cell.number}
+            </button>
+          ))
+        )}
+      </div>
+      {winningIndices && (
+        <p className="mt-4 text-xl font-bold text-yellow-500">
+          🎉 Bingo! You got a winning line! 🎉
+        </p>
+      )}
+      <button
+        onClick={() => {
+          setBoard(generateBingoBoard());
+          setWinningIndices(null);
+        }}
+        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+      >
+        Reset Board
+      </button>
+    </div>
+  );
+};
+
+export default BingoApp;
