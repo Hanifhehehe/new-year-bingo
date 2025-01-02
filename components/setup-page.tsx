@@ -3,8 +3,7 @@
 import { useState, useEffect, FormEvent } from 'react'
 import { Goal } from '../types/bingo'
 import { GoalChip } from '../components/goal-chip'
-// Import the local JSON data
-import data from '../lib/data100.json'
+import data from '../lib/data.json'
 
 interface SetupPageProps {
   onComplete: (goals: Goal[]) => void;
@@ -15,7 +14,7 @@ export default function SetupPage({ onComplete }: SetupPageProps) {
   const [allSuggestedGoals, setAllSuggestedGoals] = useState<Goal[]>([])
   const [displayedSuggestions, setDisplayedSuggestions] = useState<Goal[]>([])
   const [inputValue, setInputValue] = useState('')
-  const [isLoading, setIsLoading] = useState(false) // No need to show loading since data is local
+  const [showPopup, setShowPopup] = useState(false)
 
   const getRandomGoals = (goals: Goal[], count: number) => {
     const shuffled = [...goals].sort(() => 0.5 - Math.random())
@@ -23,25 +22,28 @@ export default function SetupPage({ onComplete }: SetupPageProps) {
   }
 
   const refreshSuggestions = () => {
-    setDisplayedSuggestions(getRandomGoals(allSuggestedGoals, 5))
+    setDisplayedSuggestions(getRandomGoals(allSuggestedGoals, 25))
   }
 
   useEffect(() => {
-    // No need for async fetching, just set the local data
     setAllSuggestedGoals(data)
-    setDisplayedSuggestions(getRandomGoals(data, 5))
+    setDisplayedSuggestions(getRandomGoals(data, 35))
   }, [])
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    if (inputValue.trim() && userGoals.length < 25) {
-      const newGoal: Goal = {
-        id: Date.now(),
-        title: inputValue.trim(),
-        isUserGenerated: true
+    if (inputValue.length <= 4 ){
+      alert("No spamming pls, bayar server mahal tau >:(")
+    } else {
+      if (inputValue.trim() && userGoals.length < 25) {
+        const newGoal: Goal = {
+          id: Date.now(),
+          title: inputValue.trim(),
+          isUserGenerated: true
+        }
+        setUserGoals([...userGoals, newGoal])
+        setInputValue('')
       }
-      setUserGoals([...userGoals, newGoal])
-      setInputValue('')
     }
   }
 
@@ -49,15 +51,7 @@ export default function SetupPage({ onComplete }: SetupPageProps) {
     if (userGoals.length < 25) {
       setUserGoals([...userGoals, goal])
       setAllSuggestedGoals(allSuggestedGoals.filter(g => g.id !== goal.id))
-      const remainingSuggestions = displayedSuggestions.filter(g => g.id !== goal.id)
-      const newSuggestion = getRandomGoals(
-        allSuggestedGoals.filter(g => 
-          !displayedSuggestions.find(d => d.id === g.id) && 
-          g.id !== goal.id
-        ),
-        1
-      )
-      setDisplayedSuggestions([...remainingSuggestions, ...newSuggestion])
+      setDisplayedSuggestions(displayedSuggestions.filter(g => g.id !== goal.id))
     }
   }
 
@@ -70,43 +64,72 @@ export default function SetupPage({ onComplete }: SetupPageProps) {
   }
 
   const handleGenerate = () => {
-    if (userGoals.length === 25) {
-      onComplete(userGoals)
+    if (userGoals.length < 25) {
+      setShowPopup(true)
+    } else {
+      generateFinalGoals()
     }
   }
 
+  const generateFinalGoals = () => {
+    let finalGoals = [...userGoals]
+    if (finalGoals.length < 25) {
+      const remainingCount = 25 - finalGoals.length
+      const availableGoals = allSuggestedGoals.filter(
+        goal => !finalGoals.some(userGoal => userGoal.id === goal.id)
+      )
+      const randomGoals = getRandomGoals(availableGoals, remainingCount)
+      finalGoals = [...finalGoals, ...randomGoals]
+    }
+    
+    // Randomize the order of all goals
+    const shuffledGoals = finalGoals.sort(() => Math.random() - 0.5)
+    
+    setUserGoals(shuffledGoals)
+    onComplete(shuffledGoals)
+  }
+  
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#EFF7F6] to-[#F7D6E0] p-4 md:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-background to-background-alt p-4 md:p-8">
       <div className="max-w-2xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12 text-[#F2B5D4]">
-          2025 GOALS BINGO
+        <h1 className="text-4xl font-bold text-center mb-12 text-primary">
+          2025 NGAREP BINGO
         </h1>
 
         <div className="bg-white bg-opacity-50 rounded-xl p-6 shadow-lg space-y-6">
           <form onSubmit={handleSubmit} className="space-y-2">
-            <h2 className="text-xl font-semibold text-[#7BDFF2]">
-              What's your resolution?
+            <h2 className="text-xl font-semibold text-secondary">
+              Target dan harapan kk apa?
             </h2>
             <div className="flex gap-2">
               <input
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                className="flex-1 px-4 py-2 rounded-lg border border-[#B2F7EF] focus:outline-none focus:ring-2 focus:ring-[#7BDFF2]"
-                placeholder="Enter your resolution..."
+                className="flex-1 px-4 py-2 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-secondary"
+                placeholder="Silahkan kk, new year's resolutionnya"
               />
               <button
                 type="submit"
-                className="px-4 py-2 bg-[#7BDFF2] text-white rounded-lg hover:bg-[#B2F7EF] transition-colors"
+                className="px-4 py-2 bg-secondary text-white rounded-lg hover:bg-button-hover transition-colors"
               >
-                Add
+                Tambah
               </button>
             </div>
           </form>
 
           <div className="space-y-4">
             <div className="space-y-2">
-              <h3 className="text-sm text-[#F2B5D4]">Your resolutions:</h3>
+              <div className="flex justify-between items-center">
+                <h3 className="text-sm text-primary">Target dan harapan kk:</h3>
+                <button
+                  onClick={refreshSuggestions}
+                  className="text-xs text-secondary hover:text-primary transition-colors"
+                >
+                  Ganti inspirasi
+                </button>
+              </div>
               <div className="min-h-[50px]">
                 {userGoals.map(goal => (
                   <GoalChip
@@ -116,54 +139,88 @@ export default function SetupPage({ onComplete }: SetupPageProps) {
                     onRemove={() => handleRemoveGoal(goal.id)}
                   />
                 ))}
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <div className="flex justify-between items-center">
-                <h3 className="text-sm text-[#F2B5D4]">Need help? Add ones below!</h3>
-                <button
-                  onClick={refreshSuggestions}
-                  className="text-sm text-[#7BDFF2] hover:text-[#F2B5D4] transition-colors"
-                >
-                  Refresh suggestions
-                </button>
-              </div>
-              <div>
-                {displayedSuggestions.map(goal => (
-                  <GoalChip
-                    key={goal.id}
-                    title={goal.title}
-                    type="suggestion"
-                    onAdd={() => handleAddSuggested(goal)}
-                  />
-                ))}
+                {displayedSuggestions.length > 0 ? (
+                  displayedSuggestions.map(goal => (
+                    <GoalChip
+                      key={goal.id}
+                      title={goal.title}
+                      type="suggestion"
+                      onAdd={() => handleAddSuggested(goal)}
+                    />
+                  ))
+                ) : (
+                  <div>Loading...</div> // Replace this with a spinner or custom loader component
+                )}
               </div>
             </div>
           </div>
 
           <div className="text-center space-y-4">
-            <p className="text-sm text-[#F2B5D4]">
-              You have {userGoals.length} {userGoals.length === 1 ? 'resolution' : 'resolutions'},
-              you need to add {25 - userGoals.length} more
-            </p>
+            {userGoals.length === 25 ? (
+              <p className="text-lg text-primary"><strong>Hore udah cukup goalnya!</strong></p>
+            ) : userGoals.length > 0 ? (
+              <p className="text-sm text-primary">
+                Kk butuh <strong>{25-userGoals.length} {userGoals.length === 1 ? 'target' : 'target'}</strong> lagi. Atau 
+                {userGoals.length < 25 && ` klik "Mulai!" untuk melengkapi dengan ${25 - userGoals.length} target acak.`}
+              </p>
+            ) : (
+              <p className="text-sm text-primary">
+                {`Tambahin beberapa harapan kk ato klik "Mulai!" untuk ditambahin sama punya kita, kk.`}
+              </p>
+            )}
             <button
               onClick={handleGenerate}
-              disabled={userGoals.length !== 25}
               className={`
                 px-6 py-3 rounded-lg text-white font-semibold
-                ${userGoals.length === 25
-                  ? 'bg-[#F2B5D4] hover:bg-[#7BDFF2]'
-                  : 'bg-[#B2F7EF] opacity-50 cursor-not-allowed'
-                }
+                bg-primary hover:bg-secondary
                 transition-all duration-300
               `}
             >
-              Generate!
+              Mulai!
             </button>
           </div>
         </div>
-      </div>
+        {showPopup && (
+            <div 
+              className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+              onClick={() => setShowPopup(false)}
+            >
+              <div 
+                className="bg-white bg-opacity-95 p-6 rounded-xl shadow-lg w-full max-w-md"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <h2 className="text-2xl font-bold mb-4 text-primary">Yakin?</h2>
+                { userGoals.length == 0 ?
+                  <p className='mb-6 text-secondary'>
+                    Kk belom nambahin harapan kk di 2025 loh, mau dibikinin aja?
+                  </p>
+                  :
+                  <p className="mb-6 text-secondary">
+                    Kk yakin cuma mau bikin {userGoals.length} doang? Masih kurang {25 - userGoals.length} lagi! 
+                    Kalo kk yakin kk bakal dikasih bingo random ya
+                  </p>
+                }
+                <div className="flex justify-between">
+                  <button
+                    onClick={() => setShowPopup(false)}
+                    className="px-4 py-2 bg-background text-primary rounded-lg hover:bg-background-alt transition-colors"
+                  >
+                    { userGoals.length == 0? `Oh iya! Tambah dulu ya kak` : `Okedeh, isi lagi`}
+                  </button>
+                  <button
+                    onClick={() => {
+                      setShowPopup(false)
+                      generateFinalGoals()
+                    }}
+                    className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-secondary transition-colors"
+                  >
+                    {userGoals.length == 0? `Ywd.` : `Lanjut!`}
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
     </div>
   )
 }

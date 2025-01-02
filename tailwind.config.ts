@@ -9,8 +9,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: '#FF5841',      // Sunset orange
+        secondary: '#1D1842',    // Deep purple
+        background: '#FFFFFF',   // White
+        'background-alt': '#E9F1FA', // Light blue
+        border: '#00ABE4',       // Bright blue
+        'button-hover': '#FDA1A2', // Light pink
+        button: '#FF5841',       // Sunset orange (same as primary)
+        text: '#1D1842',         // Deep purple (same as secondary)
+        'text-dark': '#000000',  // Black
       },
     },
   },
