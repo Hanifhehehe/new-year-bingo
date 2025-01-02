@@ -1,0 +1,104 @@
+{
+  "resolutions": [
+    {
+      "id": 1,
+      "title": "Exercise Regularly"
+    },
+    {
+      "id": 2,
+      "title": "Eat Healthier"
+    },
+    {
+      "id": 3,
+      "title": "Save Money"
+    },
+    {
+      "id": 4,
+      "title": "Learn a New Skill"
+    },
+    {
+      "id": 5,
+      "title": "Read More Books"
+    },
+    {
+      "id": 6,
+      "title": "Reduce Screen Time"
+    },
+    {
+      "id": 7,
+      "title": "Practice Gratitude"
+    },
+    {
+      "id": 8,
+      "title": "Get Organized"
+    },
+    {
+      "id": 9,
+      "title": "Travel More"
+    },
+    {
+      "id": 10,
+      "title": "Strengthen Relationships"
+    },
+    {
+      "id": 11,
+      "title": "Volunteer"
+    },
+    {
+      "id": 12,
+      "title": "Drink More Water"
+    },
+    {
+      "id": 13,
+      "title": "Improve Mental Health"
+    },
+    {
+      "id": 14,
+      "title": "Get Better Sleep"
+    },
+    {
+      "id": 15,
+      "title": "Learn a New Language"
+    },
+    {
+      "id": 16,
+      "title": "Try New Recipes"
+    },
+    {
+      "id": 17,
+      "title": "Invest in Self-Care"
+    },
+    {
+      "id": 18,
+      "title": "Cut Down on Sugar"
+    },
+    {
+      "id": 19,
+      "title": "Be More Eco-Friendly"
+    },
+    {
+      "id": 20,
+      "title": "Quit a Bad Habit"
+    },
+    {
+      "id": 21,
+      "title": "Enhance Career Skills"
+    },
+    {
+      "id": 22,
+      "title": "Start Journaling"
+    },
+    {
+      "id": 23,
+      "title": "Spend Less Time Procrastinating"
+    },
+    {
+      "id": 24,
+      "title": "Build a Morning Routine"
+    },
+    {
+      "id": 25,
+      "title": "Give Back More"
+    }
+  ]
+}

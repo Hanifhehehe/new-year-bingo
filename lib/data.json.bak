@@ -1,0 +1,129 @@
+{
+  "resolutions": [
+    {
+      "id": 1,
+      "title": "Exercise Regularly",
+      "description": "Commit to working out at least 3 times a week to stay fit and healthy."
+    },
+    {
+      "id": 2,
+      "title": "Eat Healthier",
+      "description": "Incorporate more fruits, vegetables, and whole foods into daily meals."
+    },
+    {
+      "id": 3,
+      "title": "Save Money",
+      "description": "Set aside 20% of monthly income for savings or investments."
+    },
+    {
+      "id": 4,
+      "title": "Learn a New Skill",
+      "description": "Pick up a new hobby like playing an instrument, cooking, or coding."
+    },
+    {
+      "id": 5,
+      "title": "Read More Books",
+      "description": "Aim to read at least one book per month."
+    },
+    {
+      "id": 6,
+      "title": "Reduce Screen Time",
+      "description": "Limit daily phone and computer use for non-essential activities."
+    },
+    {
+      "id": 7,
+      "title": "Practice Gratitude",
+      "description": "Write down three things to be grateful for every day."
+    },
+    {
+      "id": 8,
+      "title": "Get Organized",
+      "description": "Declutter the home and maintain a clean and organized space."
+    },
+    {
+      "id": 9,
+      "title": "Travel More",
+      "description": "Plan at least two trips to new destinations this year."
+    },
+    {
+      "id": 10,
+      "title": "Strengthen Relationships",
+      "description": "Spend more quality time with family and friends."
+    },
+    {
+      "id": 11,
+      "title": "Volunteer",
+      "description": "Dedicate time to a cause or community project."
+    },
+    {
+      "id": 12,
+      "title": "Drink More Water",
+      "description": "Aim to drink at least 2 liters of water daily."
+    },
+    {
+      "id": 13,
+      "title": "Improve Mental Health",
+      "description": "Practice mindfulness or meditation for 10 minutes a day."
+    },
+    {
+      "id": 14,
+      "title": "Get Better Sleep",
+      "description": "Develop a consistent sleep routine and aim for 7-8 hours nightly."
+    },
+    {
+      "id": 15,
+      "title": "Learn a New Language",
+      "description": "Start learning a new language using an app or course."
+    },
+    {
+      "id": 16,
+      "title": "Try New Recipes",
+      "description": "Experiment with cooking a new dish every week."
+    },
+    {
+      "id": 17,
+      "title": "Invest in Self-Care",
+      "description": "Set aside time weekly for activities that promote relaxation and happiness."
+    },
+    {
+      "id": 18,
+      "title": "Cut Down on Sugar",
+      "description": "Reduce consumption of sugary drinks and snacks."
+    },
+    {
+      "id": 19,
+      "title": "Be More Eco-Friendly",
+      "description": "Adopt sustainable habits like recycling and reducing plastic use."
+    },
+    {
+      "id": 20,
+      "title": "Quit a Bad Habit",
+      "description": "Identify and work on eliminating a habit that no longer serves you."
+    },
+    {
+      "id": 21,
+      "title": "Enhance Career Skills",
+      "description": "Take a course or attend workshops relevant to your career."
+    },
+    {
+      "id": 22,
+      "title": "Start Journaling",
+      "description": "Write down thoughts and reflections regularly."
+    },
+    {
+      "id": 23,
+      "title": "Spend Less Time Procrastinating",
+      "description": "Break tasks into smaller steps and tackle them one at a time."
+    },
+    {
+      "id": 24,
+      "title": "Build a Morning Routine",
+      "description": "Establish habits that set a positive tone for the day."
+    },
+    {
+      "id": 25,
+      "title": "Give Back More",
+      "description": "Donate to charities or help someone in need."
+    }
+  ]
+}
