@@ -1,12 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-import { Goal } from '../types/bingo'
+import { Goal } from '@/types/bingo'
 import SetupPage from '@/components/setup-page'
 import BingoBoard from '@/components/bingo-board'
 
 export default function Home() {
   const [goals, setGoals] = useState<Goal[] | null>(null)
+  const [isRecap, setIsRecap] = useState(false)
 
   const handleSetupComplete = (selectedGoals: Goal[]) => {
     setGoals(selectedGoals)
@@ -16,10 +17,25 @@ export default function Home() {
     setGoals(null)
   }
 
-  if (!goals) {
-    return <SetupPage onComplete={handleSetupComplete} />
+  const handleRecapToggle = (value: boolean) => {
+    setIsRecap(value)
   }
 
-  return <BingoBoard initialGoals={goals} onBack={handleBack} />
-}
+  if (!goals) {
+    return (
+      <SetupPage 
+        onComplete={handleSetupComplete} 
+        isRecap={isRecap}
+        onRecapToggle={handleRecapToggle}
+      />
+    )
+  }
 
+  return (
+    <BingoBoard 
+      initialGoals={goals} 
+      onBack={handleBack} 
+      isRecap={isRecap}
+    />
+  )
+}

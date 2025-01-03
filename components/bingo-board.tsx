@@ -8,9 +8,10 @@ import { checkForWin } from '../utils/bingoUtils'
 interface BingoBoardProps {
   initialGoals: Goal[];
   onBack: () => void;
+  isRecap: boolean
 }
 
-export default function BingoBoard({ initialGoals, onBack }: BingoBoardProps) {
+export default function BingoBoard({ initialGoals, onBack, isRecap }: BingoBoardProps) {
   const [board, setBoard] = useState<BingoTile[]>(() => 
     initialGoals.map(goal => ({
       id: goal.id,
@@ -55,7 +56,7 @@ export default function BingoBoard({ initialGoals, onBack }: BingoBoardProps) {
           ← Balik
         </button>
         <h1 className="text-4xl font-bold mb-8 text-primary shadow-sm text-center">
-          2025 Ngarep Bingo
+          {isRecap ? `2024 RECAP`: `2025 NGAREP`} BINGO
         </h1>
       </div>
       <div className="grid grid-cols-5 gap-3 max-w-md w-full bg-white bg-opacity-50 p-4 rounded-xl shadow-lg">
@@ -64,25 +65,33 @@ export default function BingoBoard({ initialGoals, onBack }: BingoBoardProps) {
             key={tile.id}
             onClick={() => toggleTile(index)}
             className={`
-              aspect-square p-1 text-sm sm:text-sm md:text-base rounded-lg 
-              transition-all duration-300 flex items-center justify-center text-center 
-              shadow-sm hover:shadow-md 
+              aspect-square 
+              flex items-center justify-center
+              p-2 text-xs sm:text-sm
+              rounded-lg shadow-sm hover:shadow-md
+              transition-all duration-300
               ${tile.isSelected
-                ? 'bg-secondary text-white font-semibold transform scale-105'
+                ? 'bg-secondary text-white font-semibold transform scale-102'
                 : 'bg-border text-white hover:bg-secondary'
               }
               ${winningLine && winningLine.includes(index) ? 'ring-4 ring-primary ring-opacity-75' : ''}
             `}
           >
-            <span className='text-sm'>
-              {tile.title}
-            </span>
+            <div className="w-full h-full flex items-center justify-center">
+              <span className="text-center break-words">
+                {tile.title}
+              </span>
+            </div>
           </button>
         ))}
       </div>
       {winningLine && (
-        <div className="mt-8 text-2xl font-bold text-primary animate-bounce">
-          KK HEBAT BANGET DAPET BINGO!
+        <div className="mt-8 font-bold text-primary animate-bounce text-center">
+          <h1 className='text-2xl '>
+            KK HEBAT BANGET DAPET BINGO!
+          </h1>
+          <p>dd kagum bgt deh jdnya.. hehehe...</p>
+          <p className='text-xs'>follow ig aku kk hanifhehehe</p>
         </div>
       )}
     </div>

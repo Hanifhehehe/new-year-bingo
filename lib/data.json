@@ -1,125 +1,702 @@
 [
-  { "id": 1, "title": "Olahraga tiap hari" },
-  { "id": 2, "title": "Masak makanan viral" },
-  { "id": 3, "title": "Kurangin jajan" },
-  { "id": 4, "title": "Masuk FYP TikTok" },
-  { "id": 5, "title": "Dapet pacar" },
-  { "id": 6, "title": "Follower nambah 100" },
-  { "id": 7, "title": "Healing ke Bali" },
-  { "id": 8, "title": "Selfie pas macet" },
-  { "id": 9, "title": "Bangun jam 6 sore" },
-  { "id": 10, "title": "Bangun jam 6 pagi" },
-  { "id": 11, "title": "Punya side hustle" },
-  { "id": 12, "title": "iPhone 16 dijual di Indo" },
-  { "id": 13, "title": "Baca buku tiap minggu" },
-  { "id": 14, "title": "Belajar alat musik" },
-  { "id": 15, "title": "Meditasi" },
-  { "id": 16, "title": "Skincare morning" },
-  { "id": 17, "title": "Belajar bahasa asing" },
-  { "id": 18, "title": "Gak makan KFC setahun" },
-  { "id": 19, "title": "Feed Instagram keren" },
-  { "id": 20, "title": "Nonton Fast Furious 11" },
-  { "id": 21, "title": "Ketawa sampe nangis" },
-  { "id": 22, "title": "Bikin vlog/podcast" },
-  { "id": 23, "title": "Ikut kelas online" },
-  { "id": 24, "title": "Ngeliat kuntilanak" },
-  { "id": 25, "title": "Pinjol lunas" },
-  { "id": 26, "title": "Mobil lunas" },
-  { "id": 27, "title": "Puji tuhan Islam" },
-  { "id": 28, "title": "Alhamdulillah Kristen" },
-  { "id": 29, "title": "Jalan sama mama papa" },
-  { "id": 30, "title": "Makan salad" },
-  { "id": 31, "title": "Healing sendirian" },
-  { "id": 32, "title": "Healing sama mantan (eh)" },
-  { "id": 33, "title": "Party sama temen" },
-  { "id": 34, "title": "Keluar negri" },
-  { "id": 35, "title": "Keluar negri, open jastip" },
-  { "id": 36, "title": "No smoking selama sebulan" },
-  { "id": 37, "title": "Nyicip yoga" },
-  { "id": 38, "title": "Cari hobi baru" },
-  { "id": 39, "title": "Bilang ily ke mama/papa" },
-  { "id": 40, "title": "Bully adek" },
-  { "id": 41, "title": "Bully kakak" },
-  { "id": 42, "title": "Dibully kakak" },
-  { "id": 43, "title": "Dibully adek" },
-  { "id": 44, "title": "Open table" },
-  { "id": 45, "title": "Join komunitas" },
-  { "id": 46, "title": "Update LinkedIn" },
-  { "id": 47, "title": "Pake VPN ;)" },
-  { "id": 48, "title": "Main bareng gebetan" },
-  { "id": 49, "title": "Kenalan sama cwk di bar" },
-  { "id": 50, "title": "Unfollow si doi" },
-  { "id": 51, "title": "Benerin lcd hape :'''" },
-  { "id": 52, "title": "Nonton Netflix selama 3 jam" },
-  { "id": 53, "title": "Nonton drakor sampe pagi" },
-  { "id": 54, "title": "Update windows" },
-  { "id": 55, "title": "Ngompol :''" },
-  { "id": 56, "title": "Staycation" },
-  { "id": 57, "title": "Ngepost draft TikTok" },
-  { "id": 58, "title": "Ngepost draft IG" },
-  { "id": 59, "title": "Bikin playlist" },
-  { "id": 60, "title": "Difollow doi ;)" },
-  { "id": 61, "title": "Berhasil move on" },
-  { "id": 62, "title": "Ganti lampu rumah" },
-  { "id": 63, "title": "Beli baju item" },
-  { "id": 64, "title": "Ngelukis hore" },
-  { "id": 65, "title": "Nemuin mainan pas kecil" },
-  { "id": 66, "title": "Nyobain 'hidden gem'" },
-  { "id": 67, "title": "Nyesel dengerin TikTok" },
-  { "id": 68, "title": "Mulai ngegym" },
-  { "id": 69, "title": "Cebok pake tisu" },
-  { "id": 70, "title": "Post story rutin" },
-  { "id": 71, "title": "Bikin latte art" },
-  { "id": 72, "title": "Karoke" },
-  { "id": 73, "title": "Masak resep TikTok" },
-  { "id": 74, "title": "Ngasih tip ke ojol" },
-  { "id": 75, "title": "Ke Atlas Beach Club" },
-  { "id": 76, "title": "Mobil baruuu" },
-  { "id": 77, "title": "Rumah baruuu" },
-  { "id": 78, "title": "Hape baruuu" },
-  { "id": 79, "title": "Belajar GarageBand" },
-  { "id": 80, "title": "Nyoba coding" },
-  { "id": 81, "title": "Jaga lilin" },
-  { "id": 82, "title": "'Minjem' baju kakak" },
-  { "id": 83, "title": "'Minjem' baju temen" },
-  { "id": 84, "title": "Nyium-nyium jaket doi" },
-  { "id": 85, "title": "Nge-vlog terus apus" },
-  { "id": 86, "title": "Nyoba filter TikTok" },
-  { "id": 87, "title": "Beli lampu" },
-  { "id": 88, "title": "Manasin orang" },
-  { "id": 89, "title": "Gossipin orang" },
-  { "id": 90, "title": "Dinner sok fancy" },
-  { "id": 91, "title": "Beli kopi overpriced" },
-  { "id": 92, "title": "Testdrive mobil idaman" },
-  { "id": 93, "title": "First date!!" },
-  { "id": 94, "title": "Doi ghosting :''" },
-  { "id": 95, "title": "Perpanjang paspor" },
-  { "id": 96, "title": "Perpanjang KTP/SIM" },
-  { "id": 97, "title": "Nyetir/riding keluar kota" },
-  { "id": 98, "title": "Makan eskrim pas 'diet'" },
-  { "id": 99, "title": "Ngefollow Hanifhehehe" },
-  { "id": 100, "title": "Terjun dari pesawat (skydiving)" },
-  { "id": 101, "title": "Nyanyi tapi gasadar" },
-  { "id": 102, "title": "Ditegor orang" },
-  { "id": 103, "title": "Temen nikah duluan" },
-  { "id": 104, "title": "Adek nikah duluan" },
-  { "id": 105, "title": "Beli kopi tapi zonk" },
-  { "id": 106, "title": "Unfollow mantan" },
-  { "id": 107, "title": "Difollow gebetan" },
-  { "id": 108, "title": "Naik pesawat" },
-  { "id": 109, "title": "Ketemu Taylor Swift" },
-  { "id": 111, "title": "Main ke PIK" },
-  { "id": 112, "title": "Main ke PIM" },
-  { "id": 113, "title": "Telat ngantor" },
-  { "id": 114, "title": "Telat ngampus" },
-  { "id": 115, "title": "Nonton YouTube 3 jam" },
-  { "id": 116, "title": "Main sama anbul temen" },
-  { "id": 117, "title": "Cuan dari bisnis sus" },
-  { "id": 118, "title": "Kena spam call" },
-  { "id": 119, "title": "Ditolak buy 1 get 1" },
-  { "id": 120, "title": "Ngerasain macet Canggu"},
-  { "id": 121, "title": "Kebanjiran :("},
-  { "id": 122, "title": "Gak kena macet Sudirman"},
-  { "id": 123, "title": "Kepuncak pas weekend"},
-  { "id": 124, "title": "Enek sama lagu trending"}
+    {
+        "id": 1,
+        "type": "shown",
+        "title": "Olahraga tiap hari"
+    },
+    {
+        "id": 2,
+        "type": "hidden",
+        "title": "Masak makanan viral"
+    },
+    {
+        "id": 3,
+        "type": "hidden",
+        "title": "Kebanyakan jajan"
+    },
+    {
+        "id": 4,
+        "type": "shown",
+        "title": "Masuk FYP TikTok"
+    },
+    {
+        "id": 5,
+        "type": "shown",
+        "title": "Dapet pacar"
+    },
+    {
+        "id": 6,
+        "type": "shown",
+        "title": "Follower nambah 100"
+    },
+    {
+        "id": 7,
+        "type": "shown",
+        "title": "Healing ke Bali"
+    },
+    {
+        "id": 8,
+        "type": "hidden",
+        "title": "Selfie pas macet"
+    },
+    {
+        "id": 9,
+        "type": "hidden",
+        "title": "Bangun jam 6 sore"
+    },
+    {
+        "id": 10,
+        "type": "shown",
+        "title": "Bangun jam 6 pagi"
+    },
+    {
+        "id": 11,
+        "type": "shown",
+        "title": "Punya side hustle"
+    },
+    {
+        "id": 12,
+        "type": "shown",
+        "title": "Baca buku tiap minggu"
+    },
+    {
+        "id": 13,
+        "type": "shown",
+        "title": "Belajar alat musik"
+    },
+    {
+        "id": 14,
+        "type": "shown",
+        "title": "Meditasi"
+    },
+    {
+        "id": 15,
+        "type": "shown",
+        "title": "Skincare morning"
+    },
+    {
+        "id": 16,
+        "type": "shown",
+        "title": "Belajar bahasa asing"
+    },
+    {
+        "id": 17,
+        "type": "shown",
+        "title": "Benerin feed IG"
+    },
+    {
+        "id": 18,
+        "type": "2024",
+        "title": "Nonton Smile 2"
+    },
+    {
+        "id": 19,
+        "type": "shown",
+        "title": "Bikin podcast"
+    },
+    {
+        "id": 20,
+        "type": "shown",
+        "title": "Ikut kelas online"
+    },
+    {
+        "id": 21,
+        "type": "shown",
+        "title": "Kartu kredit lunas"
+    },
+    {
+        "id": 22,
+        "type": "shown",
+        "title": "Mobil lunas"
+    },
+    {
+        "id": 23,
+        "type": "hidden",
+        "title": "Jalan sama mama papa"
+    },
+    {
+        "id": 24,
+        "type": "hidden",
+        "title": "Makan salad"
+    },
+    {
+        "id": 25,
+        "type": "hidden",
+        "title": "Healing sendirian"
+    },
+    {
+        "id": 26,
+        "type": "hidden",
+        "title": "Party sama temen"
+    },
+    {
+        "id": 27,
+        "type": "shown",
+        "title": "Keluar negri"
+    },
+    {
+        "id": 28,
+        "type": "hidden",
+        "title": "Keluar negri, open jastip"
+    },
+    {
+        "id": 29,
+        "type": "shown",
+        "title": "Stop ngepods"
+    },
+    {
+        "id": 30,
+        "type": "shown",
+        "title": "Nyobain yoga"
+    },
+    {
+        "id": 31,
+        "type": "shown",
+        "title": "Cari hobi baru"
+    },
+    {
+        "id": 32,
+        "type": "shown",
+        "title": "Family quality time"
+    },
+    {
+        "id": 33,
+        "type": "shown",
+        "title": "Bully adek"
+    },
+    {
+        "id": 34,
+        "type": "shown",
+        "title": "Bully kakak"
+    },
+    {
+        "id": 35,
+        "type": "shown",
+        "title": "Open table"
+    },
+    {
+        "id": 36,
+        "type": "hidden",
+        "title": "Join komunitas"
+    },
+    {
+        "id": 37,
+        "type": "shown",
+        "title": "Update LinkedIn"
+    },
+    {
+        "id": 38,
+        "type": "hidden",
+        "title": "Main bareng gebetan"
+    },
+    {
+        "id": 39,
+        "type": "hidden",
+        "title": "Kenalan sama cwk di bar"
+    },
+    {
+        "id": 40,
+        "type": "hidden",
+        "title": "Unfollow si doi"
+    },
+    {
+        "id": 41,
+        "type": "hidden",
+        "title": "Staycation"
+    },
+    {
+        "id": 42,
+        "type": "hidden",
+        "title": "Ngepost draft TikTok"
+    },
+    {
+        "id": 43,
+        "type": "hidden",
+        "title": "Ngepost draft IG"
+    },
+    {
+        "id": 44,
+        "type": "hidden",
+        "title": "Bikin playlist"
+    },
+    {
+        "id": 45,
+        "type": "hidden",
+        "title": "Difollow doi ;)"
+    },
+    {
+        "id": 46,
+        "type": "hidden",
+        "title": "Ganti lampu rumah"
+    },
+    {
+        "id": 47,
+        "type": "shown",
+        "title": "Mulai ngegym"
+    },
+    {
+        "id": 48,
+        "type": "shown",
+        "title": "Post story rutin"
+    },
+    {
+        "id": 49,
+        "type": "hidden",
+        "title": "Bikin latte art"
+    },
+    {
+        "id": 50,
+        "type": "hidden",
+        "title": "Karoke"
+    },
+    {
+        "id": 51,
+        "type": "hidden",
+        "title": "Masak resep TikTok"
+    },
+    {
+        "id": 52,
+        "type": "hidden",
+        "title": "Ke Atlas Beach Club"
+    },
+    {
+        "id": 53,
+        "type": "shown",
+        "title": "Mobil baruuu"
+    },
+    {
+        "id": 54,
+        "type": "shown",
+        "title": "Rumah baruuu"
+    },
+    {
+        "id": 55,
+        "type": "shown",
+        "title": "Hape baruuu"
+    },
+    {
+        "id": 56,
+        "type": "shown",
+        "title": "Belajar GarageBand"
+    },
+    {
+        "id": 57,
+        "type": "shown",
+        "title": "Nyoba coding"
+    },
+    {
+        "id": 58,
+        "type": "shown",
+        "title": "Jaga lilin"
+    },
+    {
+        "id": 59,
+        "type": "hidden",
+        "title": "'Minjem' baju kakak"
+    },
+    {
+        "id": 60,
+        "type": "hidden",
+        "title": "'Minjem' baju temen"
+    },
+    {
+        "id": 61,
+        "type": "hidden",
+        "title": "Nge-vlog terus apus"
+    },
+    {
+        "id": 62,
+        "type": "hidden",
+        "title": "Nyoba filter TikTok"
+    },
+    {
+        "id": 63,
+        "type": "hidden",
+        "title": "Beli lampu"
+    },
+    {
+        "id": 64,
+        "type": "2024",
+        "title": "Fancy dinner"
+    },
+    {
+        "id": 65,
+        "type": "2024",
+        "title": "Beli kopi overpriced"
+    },
+    {
+        "id": 66,
+        "type": "2024",
+        "title": "Testdrive mobil idaman"
+    },
+    {
+        "id": 67,
+        "type": "shown",
+        "title": "First date!!"
+    },
+    {
+        "id": 68,
+        "type": "2024",
+        "title": "Nyetir/riding keluar kota"
+    },
+    {
+        "id": 69,
+        "type": "hidden",
+        "title": "Terjun dari pesawat (skydiving)"
+    },
+    {
+        "id": 70,
+        "type": "shown",
+        "title": "Naik pesawat"
+    },
+    {
+        "id": 71,
+        "type": "shown",
+        "title": "Ketemu Taylor Swift"
+    },
+    {
+        "id": 72,
+        "type": "hidden",
+        "title": "Main ke PIK"
+    },
+    {
+        "id": 73,
+        "type": "hidden",
+        "title": "Main ke PIM"
+    },
+    {
+        "id": 74,
+        "type": "hidden",
+        "title": "Nonton YouTube 3 jam"
+    },
+    {
+        "id": 75,
+        "type": "hidden",
+        "title": "Main sama anbul temen"
+    },
+    {
+        "id": 76,
+        "type": "hidden",
+        "title": "Cuan dari bisnis"
+    },
+    {
+        "id": 77,
+        "type": "shown",
+        "title": "Punya anak pertama"
+    },
+    {
+        "id": 78,
+        "type": "hidden",
+        "title": "Ke DWP"
+    },
+    {
+        "id": 79,
+        "type": "hidden",
+        "title": "Kurangin jajan"
+    },
+    {
+        "id": 80,
+        "type": "2025",
+        "title": "iPhone 16 dijual di Indo"
+    },
+    {
+        "id": 81,
+        "type": "2024",
+        "title": "Gak makan McD setahun"
+    },
+    {
+        "id": 82,
+        "type": "2025",
+        "title": "Nonton Fast Furious 11"
+    },
+    {
+        "id": 83,
+        "type": "hidden",
+        "title": "Ngeliat kuntilanak"
+    },
+    {
+        "id": 84,
+        "type": "shown",
+        "title": "Pinjol lunas"
+    },
+    {
+        "id": 85,
+        "type": "hidden",
+        "title": "Alhamdulillah Islam"
+    },
+    {
+        "id": 86,
+        "type": "hidden",
+        "title": "Healing sama mantan (eh)"
+    },
+    {
+        "id": 87,
+        "type": "shown",
+        "title": "No smoking selama sebulan"
+    },
+    {
+        "id": 88,
+        "type": "2025",
+        "title": "Nyicip yoga"
+    },
+    {
+        "id": 89,
+        "type": "2024",
+        "title": "Bilang ily ke mama/papa"
+    },
+    {
+        "id": 90,
+        "type": "hidden",
+        "title": "Dibully kakak"
+    },
+    {
+        "id": 91,
+        "type": "hidden",
+        "title": "Dibully adek"
+    },
+    {
+        "id": 92,
+        "type": "hidden",
+        "title": "Pake VPN ;)"
+    },
+    {
+        "id": 93,
+        "type": "hidden",
+        "title": "Benerin lcd hape :'''"
+    },
+    {
+        "id": 95,
+        "type": "hidden",
+        "title": "Nonton drakor sampe pagi"
+    },
+    {
+        "id": 96,
+        "type": "hidden",
+        "title": "Update windows"
+    },
+    {
+        "id": 97,
+        "type": "hidden",
+        "title": "Ngompol :''"
+    },
+    {
+        "id": 98,
+        "type": "hidden",
+        "title": "Berhasil move on"
+    },
+    {
+        "id": 99,
+        "type": "hidden",
+        "title": "Beli baju item"
+    },
+    {
+        "id": 100,
+        "type": "hidden",
+        "title": "Ngelukis hore"
+    },
+    {
+        "id": 101,
+        "type": "hidden",
+        "title": "Nemuin mainan pas kecil"
+    },
+    {
+        "id": 102,
+        "type": "hidden",
+        "title": "Nyobain 'hidden gem'"
+    },
+    {
+        "id": 103,
+        "type": "hidden",
+        "title": "Nyesel dengerin TikTok"
+    },
+    {
+        "id": 104,
+        "type": "hidden",
+        "title": "Cebok pake tisu"
+    },
+    {
+        "id": 105,
+        "type": "hidden",
+        "title": "Ngasih tip ke ojol"
+    },
+    {
+        "id": 106,
+        "type": "2024",
+        "title": "Nyium-nyium jaket doi"
+    },
+    {
+        "id": 107,
+        "type": "2024",
+        "title": "Manasin orang"
+    },
+    {
+        "id": 108,
+        "type": "2024",
+        "title": "Gossipin orang"
+    },
+    {
+        "id": 109,
+        "type": "2024",
+        "title": "Dinner sok fancy"
+    },
+    {
+        "id": 110,
+        "type": "hidden",
+        "title": "Doi ghosting :''"
+    },
+    {
+        "id": 111,
+        "type": "shown",
+        "title": "Perpanjang paspor"
+    },
+    {
+        "id": 112,
+        "type": "shown",
+        "title": "Perpanjang KTP/SIM"
+    },
+    {
+        "id": 113,
+        "type": "hidden",
+        "title": "Makan eskrim pas 'diet'"
+    },
+    {
+        "id": 114,
+        "type": "hidden",
+        "title": "Ngefollow Hanifhehehe"
+    },
+    {
+        "id": 115,
+        "type": "2024",
+        "title": "Nyanyi tapi gasadar"
+    },
+    {
+        "id": 116,
+        "type": "2024",
+        "title": "Ditegor orang"
+    },
+    {
+        "id": 117,
+        "type": "hidden",
+        "title": "Temen nikah duluan"
+    },
+    {
+        "id": 118,
+        "type": "hidden",
+        "title": "Adek nikah duluan"
+    },
+    {
+        "id": 119,
+        "type": "hidden",
+        "title": "Beli kopi tapi zonk"
+    },
+    {
+        "id": 120,
+        "type": "2025",
+        "title": "Unfollow mantan"
+    },
+    {
+        "id": 121,
+        "type": "hidden",
+        "title": "Difollow gebetan"
+    },
+    {
+        "id": 122,
+        "type": "hidden",
+        "title": "Telat ngantor"
+    },
+    {
+        "id": 123,
+        "type": "hidden",
+        "title": "Telat ngampus"
+    },
+    {
+        "id": 124,
+        "type": "hidden",
+        "title": "Cuan dari bisnis sus"
+    },
+    {
+        "id": 125,
+        "type": "hidden",
+        "title": "Kena spam call"
+    },
+    {
+        "id": 126,
+        "type": "hidden",
+        "title": "Ditolak buy 1 get 1"
+    },
+    {
+        "id": 127,
+        "type": "hidden",
+        "title": "Ngerasain macet Canggu"
+    },
+    {
+        "id": 128,
+        "type": "hidden",
+        "title": "Kebanjiran :("
+    },
+    {
+        "id": 129,
+        "type": "hidden",
+        "title": "Gak kena macet Sudirman"
+    },
+    {
+        "id": 130,
+        "type": "hidden",
+        "title": "Kepuncak pas weekend"
+    },
+    {
+        "id": 131,
+        "type": "hidden",
+        "title": "Enek sama lagu trending"
+    },
+    {
+        "id": 132,
+        "type": "hidden",
+        "title": "Ditelfon pinjol"
+    },
+    {
+        "id": 133,
+        "type": "hidden",
+        "title": "Ketawa sampe nangis"
+    },
+    {
+        "id": 134,
+        "type": "hidden",
+        "title": "Puji tuhan Kristen"
+    },
+    {
+        "id": 135,
+        "type": "hidden",
+        "title": "Ditawarin kartu kredit"
+    },
+    {
+        "id": 136,
+        "type": "hidden",
+        "title": "Denger APT. 3x di story"
+    },
+    {
+        "id": 137,
+        "type": "hidden",
+        "title": "Keujanan"
+    },
+    {
+        "id": 138,
+        "type": "hidden",
+        "title": "Nonton Netflix 4 jam"
+    },
+    {
+        "id": 139,
+        "type": "hidden",
+        "title": "Kartu kredit decline"
+    },
+    {
+        "id": 140,
+        "type": "hidden",
+        "title": "Makan wagyu"
+    },
+    {
+        "id": 141,
+        "type": "hidden",
+        "title": "Gebetan diembat"
+    }
 ]

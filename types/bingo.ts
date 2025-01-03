@@ -10,6 +10,7 @@ export interface BingoTile extends Resolution {
 export interface Goal {
   id: number;
   title: string;
+  type: string
   isUserGenerated?: boolean;
 }
 
